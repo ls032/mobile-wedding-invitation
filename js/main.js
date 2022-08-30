@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -30,19 +30,19 @@
     $(".navbar-nav a").on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
-            
+
             $('html, body').animate({
                 scrollTop: $(this.hash).offset().top - 45
             }, 1500, 'easeInOutExpo');
-            
+
             if ($(this).parents('.navbar-nav').length) {
                 $('.navbar-nav .active').removeClass('active');
                 $(this).closest('a').addClass('active');
             }
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -55,7 +55,7 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
-    
+
 
     // Typed Initiate
     if ($('.typed-text-output').length == 1) {
@@ -121,6 +121,14 @@
         loop: true,
     });
 
-    
+    var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+    var options = { //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+        level: 3 //지도의 레벨(확대, 축소 정도)
+    };
+
+    var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+
 })(jQuery);
 
