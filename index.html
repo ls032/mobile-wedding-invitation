@@ -41,7 +41,6 @@
 	</div>
 	<!-- Spinner End -->
 
-
 	<!-- Navbar Start -->
 	<nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
 		<!-- <a href="index.html" class="navbar-brand d-block d-lg-none">
@@ -70,7 +69,6 @@
 	</nav>
 	<!-- Navbar End -->
 
-
 	<!-- Header Start -->
 	<div class="container-fluid bg-light my-6 mt-0" id="home">
 		<div class="container">
@@ -97,7 +95,6 @@
 	</div>
 	<!-- Header End -->
 
-
 	<!-- Video Modal Start -->
 	<div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -117,7 +114,6 @@
 		</div>
 	</div>
 	<!-- Video Modal End -->
-
 
 	<!-- About Start -->
 	<div class="container-xxl py-5 pb-3" id="about">
@@ -287,7 +283,6 @@
 	</div> -->
 	<!-- Expertise End -->
 
-
 	<!-- Projects Start -->
 	<div class="container-xxl py-6 pt-5" id="project">
 		<div class="container">
@@ -399,17 +394,55 @@
 				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
 					<!-- <p class="fs-5 fst-italic">오시는길</p> -->
 					<div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-						<div id="map" style="width:500px;height:400px;"></div>
+						<div id="map"></div>
 					</div>
 				</div>
 				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
 					<div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-						<div id="map_canvas" class="map">
-							<div style="font:normal normal 400 12px/normal dotum, sans-serif; width:100%; height:100%; color:#333; position:relative">
-								<div style="height: 100%;">
-									<a href="https://map.kakao.com/?urlX=510720.0&amp;urlY=1124069.0&amp;itemId=26497843&amp;q=%EC%84%9C%EC%9A%B8%EC%88%B2A%ED%83%80%EC%9B%8C&amp;srcid=26497843&amp;map_type=TYPE_MAP&amp;from=roughmap" target="_blank">
-										<img class="map" src="//t1.daumcdn.net/roughmap/imgmap/e4a136bdc0a737dd8c6a0812eebdb5fa1bfe55660e458c000633c51c83b13def" width="100%" height="100%">
-									</a>
+						<img class="img-fluid" src="img/map.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+					<ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+						<li class="nav-item w-50">
+							<button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">지하철</button>
+						</li>
+						<li class="nav-item w-50">
+							<button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">버스</button>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div id="tab-1" class="tab-pane fade show p-0 active">
+							<div class="row gy-5 gx-4">
+								<div class="col-sm-6">
+									<h5>5호선(방화행)</h5>
+									<hr class="text-primary my-2">
+									<p class="text-primary mb-1">발산역 하차 7번출구</p>
+									<!-- <h6 class="mb-0">Apex Software Inc</h6> -->
+								</div>
+							</div>
+						</div>
+						<div id="tab-2" class="tab-pane fade show p-0">
+							<div class="row gy-5 gx-4">
+								<div class="col-sm-6">
+									<h5>버스(발산역하차)</h5>
+									<hr class="text-primary my-2">
+									<p class="text-primary mb-1">파랑(간선)</p>
+									<h6 class="mb-0">601,605,642,652</h6>
+									<hr class="text-primary my-2">
+
+									<p class="text-primary mb-1">초록(지선)</p>
+									<h6 class="mb-0">6629,6630,6632,6642,6643,6645,6657</h6>
+									<hr class="text-primary my-2">
+
+									<p class="text-primary mb-1">공항버스</p>
+									<h6 class="mb-0">(김포공항)6000,(인천공항)6001,6003,6008</h6>
+									<hr class="text-primary my-2">
+
+									<p class="text-primary mb-1">일반버스</p>
+									<h6 class="mb-0">1,2,6,60,60-3,66,69,88,631</h6>
+									<hr class="text-primary my-2">
 								</div>
 							</div>
 						</div>
@@ -421,47 +454,43 @@
 	<!-- Service End -->
 
 	<!-- Team Start -->
-	<div class="container-xxl py-6 pb-5" id="team">
+	<div class="container-xxl py-3 pb-5" id="team">
 		<div class="container">
 			<div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
 				<div class="col-lg-6">
-					<h1 class="display-5 mb-0">신랑 신부 </h1>
+					<h1 class="display-5 mb-0">마음 전하기</h1>
+					<small>축하의 마음을 담아 축의금을 전달해보세요.</small>
 				</div>
 			</div>
 			<div class="row g-4">
-				<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-					<div class="team-item position-relative">
-						<img class="img-fluid rounded" src="img/team-1.jpg" alt="">
+				<input type="text" id="data-area" class="d-none" />
+				<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
+					<div class="team-item position-relative" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+						<img class="img-fluid rounded" src="img/gallery_sample_06.jpeg" alt="" >
 						<div class="team-text bg-white rounded-end p-4">
-							<div>
-								<h5>Full Name</h5>
-								<span>Designer</span>
+							<div style="margin:0;">
+								<h5>신랑측 계좌정보</h5>
+								<div>
+									국민은행 : 000-123-456789<br>
+									예금주 : 이상준
+								</div>
 							</div>
-							<i class="fa fa-arrow-right fa-2x text-primary"></i>
+							<button class="btn btn-primary position-absolute data-copy" data-acct-num="000-123-456789" style="top:10px; right:5px;" >복사</button>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
 					<div class="team-item position-relative">
-						<img class="img-fluid rounded" src="img/team-2.jpg" alt="">
+						<img class="img-fluid rounded" src="img/gallery_sample_02.jpeg" alt="">
 						<div class="team-text bg-white rounded-end p-4">
-							<div>
-								<h5>Full Name</h5>
-								<span>Designer</span>
+							<div style="margin:0;">
+								<h5>신부측 계좌정보</h5>
+								<div>
+									기업은행 : 010-1234-1234<br>
+									예금주 : 이미건
+								</div>
 							</div>
-							<i class="fa fa-arrow-right fa-2x text-primary"></i>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-					<div class="team-item position-relative">
-						<img class="img-fluid rounded" src="img/team-3.jpg" alt="">
-						<div class="team-text bg-white rounded-end p-4">
-							<div>
-								<h5>Full Name</h5>
-								<span>Designer</span>
-							</div>
-							<i class="fa fa-arrow-right fa-2x text-primary"></i>
+							<button class="btn btn-primary position-absolute data-copy" data-acct-num="010-1234-1234" style="top:10px; right:5px;" >복사</button>
 						</div>
 					</div>
 				</div>
@@ -470,11 +499,10 @@
 	</div>
 	<!-- Team End -->
 
-
 	<!-- Testimonial Start -->
 	<div class="container-fluid bg-light py-5 my-5" id="testimonial">
 		<div class="container-fluid py-5">
-			<h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
+			<h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">좋은 글귀</h1>
 			<div class="row justify-content-center">
 				<div class="col-lg-3 d-none d-lg-block">
 					<div class="testimonial-left h-100">
@@ -535,9 +563,8 @@
 	</div>
 	<!-- Testimonial End -->
 
-
 	<!-- Contact Start -->
-	<div class="container-xxl pb-5" id="contact">
+	<!-- <div class="container-xxl pb-5" id="contact">
 		<div class="container py-5">
 			<div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
 				<div class="col-lg-6">
@@ -602,42 +629,24 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- Contact End -->
 
-
-	<!-- Map Start -->
-	<div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
-		<div class="container-xxl pt-5 px-0">
-			<div class="bg-dark">
-				<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-				frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
-				tabindex="0"></iframe>
-			</div>
-		</div>
-	</div>
-	<!-- Map End -->
-
-
 	<!-- Copyright Start -->
-	<div class="container-fluid bg-dark text-white py-4">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-						&copy; <a class="border-bottom text-secondary" href="#">Your Site Name</a>, All Right Reserved.
-					</div>
-					<div class="col-md-6 text-center text-md-end">
-						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-						Designed By <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
-						<br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
-					</div>
+	<!-- <div class="container-fluid bg-dark text-white py-4">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+					&copy; <a class="border-bottom text-secondary" href="#">s.Jun</a>, All Right Reserved.
+				</div>
+				<div class="col-md-6 text-center text-md-end">
+					Designed By <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
+					<br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- Copyright End -->
-
 
 	<!-- Back to Top -->
 	<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>

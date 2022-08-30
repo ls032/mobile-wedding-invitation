@@ -123,12 +123,25 @@
 
     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
     var options = { //지도를 생성할 때 필요한 기본 옵션
-        center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-        level: 3 //지도의 레벨(확대, 축소 정도)
+        center: new kakao.maps.LatLng(37.5563542,126.8374799), //지도의 중심좌표.
+        level: 5 //지도의 레벨(확대, 축소 정도)
     };
 
     var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 
+    $('.data-copy').on('click', function() {
+        var acctNum = $(this).data('acct-num')
+        console.log('acctNum :: ' , acctNum)
+
+        $('#data-area').val(acctNum)
+        $('#data-area').select()
+        var copy = document.execCommand('copy')
+
+        if (copy) {
+            console.log('copy :: ' , copy)
+            alert('복사가 완료됐습니다.')
+        }
+    });
 
 })(jQuery);
 
